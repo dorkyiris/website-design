@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*list-style: none;*/
+}
+
+body {
+    background: #D2DAFF;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.wrapper {
+    display:flex;
+    width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 10px;
+}
+
+.wrapper .leftie {
+    width: 35%;
+    background: #aac4ff;
+}
+
+.wrapper .leftie .image {
+    width: 100%;
+}
+
+.wrapper .leftie .image img {
+    width: 100%;
+    display: block;
+}
+
+.wrapper .cv_title {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+}
+
+.wrapper .leftie .cv_info {
+    color:rgb(21, 21, 23);
+}
+
+.wrapper .leftie .cv_buttom {
+    padding: 20px 30px;
+}
+
+.wrapper .cv_item {
+    padding: 20px 0;
+    border: 1px solid #b1b2ff;
+}
+
+.wrapper .cv_item:last-child {
+    border-bottom: 0px;
+}
+
+.wrapper .leftie .cv_namerole {
+    display: none;
+}
+
+.wrapper .cv_namerole .name {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 4px;
+}
+
+.wrapper .leftie .cv_namerole .role {
+    color: #59576b;
+}
+
+.wrapper .leftie .cv_contact cv_info:last-child {
+    margin-top: 10px;
+}
+
+.wrapper .leftie .cv_contact .cv_subtitle {
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.wrapper .leftie .cv_skills {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.wrapper .leftie .cv_skills .skills_list .skills_bar p {
+    position: relative;
+    width: 125px;
+    height: 20px;
+    background: #fff;
+}
+
+.wrapper .leftie .cv_skills .skills_list .skills_bar p span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #191a38;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper .righto {
+    width: 75%;
+    padding: 20px 40px;
+}
+
+.wrapper .righto .cv_namerole .name {
+    color: #26252d;
+    font-size: 32px;
+}
+
+.wrapper .righto .cv_namerole .role {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.wrapper .righto .cv_item .cv_title {
+    color: #26252d;
+}
+
+.wrapper .righto .cv_data {
+    display: flex;
+}
+
+.wrapper .righto .cv_data .year {
+    padding-right: 35px;
+    width: 115px;
+    position: relative;
+}
+
+.wrapper .righto .cv_data .content {
+    padding-left: 35px;
+    margin-bottom: 20px;
+    width: calc(100%-115px);
+}
+
+.wrapper .righto .cv_data .year::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border: 1px solid #2625;
+    border-radius: 50%;
+}
+
+.wrapper .righto .cv_data .year::after {
+    content:"";
+    position: absolute;
+    top: 17px;
+    right: 4px;
+    width: 3px;
+    height: 90%;
+    background: #aac4ff;
+}
+
+.wrapper .righto .cv_data:last-child .year:after {
+    display: none;
+}
+
+.wrapper .righto .cv_awards .cv_info {
+    display:flex;
+}
+
+.wrapper .righto .cv_awards .cv_data {
+    color:#191a38;
+    background-color: #eef1ff;
+}
+
+.wrapper .righto .cv_interests .cv_info {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.wrapper .righto .cv_interests .interests .int_icon {
+    font-size: 38px;
+    color: #b1b2ff;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper .righto .cv_namerole {
+        display: none;
+    }
+    .wrapper .leftie .cv_namerole {
+        display: block;
+    } 
+    .wrapper {
+        width: 95%;
+        margin: 10px auto;
+        flex-direction: column;
+    }
+    .wrapper .leftie,
+    .wrapper .righto {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width : 424px) {
+    .wrapper .righto {
+        padding: 20px 30px;
+    }
+    .wrapper .righto .cv_data {
+        flex-direction: column;
+    }
+    .wrapper .righto .cv_data .year{
+        padding: 0;
+        margin-bottom: 5px;
+        width: 100%;
+        color: #0175b2;
+    }
+    .wrapper .righto .cv_data .year::before,
+    .wrapper .righto .cv_data .year::after {
+        display: none;
+    }
+    .wrapper .righto .cv_data .content {
+        width: 100%;
+        padding: 0;
+    }
+    .wrapper .righto .interests .int_icon {
+        font-size: 24px;
+    }
+}
